@@ -1,0 +1,70 @@
+<div class="container">
+    <app-panel></app-panel>
+    <div class="scroll-down">Scroll Down<br />________________</div>
+    <div class="cover">
+        <img alt="" src="../../assets/group.jpg" />
+        <div class="center">
+            <p>
+                {{ quote }}
+            </p>
+            <input type="button" value="SHOP NOW" (click)="moveToProducts()" />
+        </div>
+    </div>
+    <div class="box">
+        <div class="flex-view">
+            <h1>Lorem Ipsum</h1>
+            <div class="long-stripe"></div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis quam quam. Aliquam condimentum nisi sit amet velit tempus, ut rhoncus enim auctor. Curabitur eget eros venenatis, euismod lectus tristique, tempor purus. Vestibulum semper dui lectus, eu porta lacus sodales nec. Nullam nisi mauris, gravida eget ligula ac, varius dapibus est. Vivamus sed semper metus, at varius augue. Quisque volutpat bibendum velit, non vestibulum metus ultrices vel. Phasellus vel feugiat lacus, eget lacinia felis. Vivamus lobortis imperdiet arcu. Cras efficitur libero turpis, in aliquet ligula gravida ut. Donec porttitor imperdiet ligula at ultrices.</div>
+        </div>
+        <div class="flex-view">
+            <img alt="" src="../../assets/pose.jpg" />
+        </div>
+    </div>
+    <div class="stripe"></div>
+    <div class="box" id="product-hash">
+        <div class="flex-view" *ngFor="let product of products;">
+            <div class="product-box">
+                <img alt="" src="../../assets/group.jpg" />
+                <div>
+                    <h3>{{ product[0] }}</h3>
+                    <p>{{ product[2] }}</p>
+                    <span>{{ product[1] }}</span>
+                    <br />
+                    <br />
+                    <div class="buy-buttons">
+                        <input class="first-button" type="button" value="Add To Card" (click)="addToBasket(product[0])" />
+                        <input class="second-button" type="button" value="Buy Now" (click)="buyNow(product[0])" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stripe"></div>
+    <div class="box">
+        <div class="flex-view">
+            <img alt="" src="../../assets/sunglasses.jpg" />
+        </div>
+        <div class="flex-view">
+            <h1>Lorem Ipsum</h1>
+            <div class="long-stripe"></div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis quam quam. Aliquam condimentum nisi sit amet velit tempus, ut rhoncus enim auctor. Curabitur eget eros venenatis, euismod lectus tristique, tempor purus. Vestibulum semper dui lectus, eu porta lacus sodales nec. Nullam nisi mauris, gravida eget ligula ac, varius dapibus est. Vivamus sed semper metus, at varius augue. Quisque volutpat bibendum velit, non vestibulum metus ultrices vel. Phasellus vel feugiat lacus, eget lacinia felis. Vivamus lobortis imperdiet arcu. Cras efficitur libero turpis, in aliquet ligula gravida ut. Donec porttitor imperdiet ligula at ultrices.</div>
+        </div>
+    </div>
+    <div class="stripe"></div>
+    <div class="box">
+        <div class="flex-view">
+            <div class="newsletter">
+                <h1>Subscribe to our newsletter!</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <input type="textbox" placeholder="example@domain.com" [(ngModel)]="newsletterEmail" (input)="emailChange()" />
+                <br />
+                <span class="valid-style" *ngIf="validity === false;">Invalid email address</span>
+                <br />
+                <input type="button" value="Subscribe" (click)="newsletterClick()" />
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

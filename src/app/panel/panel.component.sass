@@ -1,0 +1,50 @@
+.panel
+    width: 100%
+    background-color: #DC3D24
+    padding-top: 18px
+    padding-bottom: 18px
+    height: 32px
+    overflow: hidden
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 99
+    display: flex
+    flex-direction: row
+    .shopping-basket
+        flex: 1
+        display: flex
+        flex-direction: row-reverse
+        padding-right: 10vw
+        .spacer
+            flex: 2
+        .img
+            flex: 1
+            .basket
+                margin-left: 8px
+                text-align: center
+                padding-left: 8px
+                padding-right: 8px
+                background-color: darken(#DC3D24, 10)
+                color: #eeeeee
+                border-radius: 16px
+                @media only screen and (max-width: 768px)
+                    position: absolute
+                    top: calc(50% - 8px)
+            img
+                width: 24px
+                height: auto
+                position: relative
+                top: 6px
+    .logo
+        flex: 1
+        color: #eeeeee
+        margin: 0
+        margin-left: 10vw
+        padding-top: 50px
+        @media only screen and (max-width: 768px)
+            margin-left: 3vw
+        img
+            width: 128px
+            position: absolute
+            top: 20%

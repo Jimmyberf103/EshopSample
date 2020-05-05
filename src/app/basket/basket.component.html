@@ -1,0 +1,22 @@
+<div class="container">
+	<app-panel></app-panel>
+	<div class="padding"></div>
+	<div class="content">
+		<h1>In Your Basket</h1>
+		<div class="box">
+			<div class="item" *ngFor="let product of products;">
+				<span class="name">{{ product[0] + " - " }}</span>
+				<span class="price">{{ product[1] }}</span>
+				<span class="remove" (click)="removeItem(product[0])">Remove</span>
+			</div>
+			<div class="stripe"></div>
+			<span>Price: {{ finalprice }} CZK</span>
+			<div class="stripe"></div>
+			<div class="buttons">
+				<input type="button" value="Continue Shopping" (click)="clickButton(0)" />
+				<input type="button" value="Clear Basket" (click)="clickButton(1)" />
+				<input type="button" value="Checkout" (click)="clickButton(2)" />
+			</div>
+		</div>
+	</div>
+</div>

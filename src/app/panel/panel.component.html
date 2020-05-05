@@ -1,0 +1,12 @@
+<div class="panel">
+    <span class="logo">
+        <img alt="" src="../../assets/logotwo.png" (click)="logoClick()" />
+    </span>
+    <span class="shopping-basket">
+        <div class="img" (click)="shoppingBasketClick()">
+            <img alt="" src="../../assets/shopping.svg" />
+            <span class="basket">{{ inBasket || "0" }}</span>
+        </div>
+        <div class="spacer"></div>
+    </span>
+</div>
